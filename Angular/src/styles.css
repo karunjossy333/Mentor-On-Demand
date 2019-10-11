@@ -1,0 +1,46 @@
+ head,
+ body {
+     width: 100%;
+     margin: 0;
+     height: 100%;
+ }
+ 
+ #logo-header {
+     background: #007bff;
+     background: linear-gradient(to left, #0062E6, #33AEFF);
+     padding: 10px;
+     padding-left: 40px;
+ }
+ 
+ .navbar-brand {
+     color: black;
+     padding-left: 10px;
+     font-family: 'Minion';
+     font-weight: bolder;
+     font-size: 25px !important;
+ }
+ 
+ #logo {
+     width: 60px;
+     height: 50px;
+ }
+ 
+ #logo-text {
+     padding-top: 5px;
+ }
+ 
+ .nav-link {
+     color: black;
+     padding-bottom: 4px;
+     font-weight: bold;
+ }
+ 
+ #footer {
+     background: #007bff;
+     background: linear-gradient(to right, #0062E6, #33AEFF);
+     padding: 15px;
+ }
+ 
+ .footer-brand {
+     color: white;
+ }

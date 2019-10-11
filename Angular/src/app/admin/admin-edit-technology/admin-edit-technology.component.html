@@ -1,0 +1,48 @@
+<div class="container mt-3">
+    <div class="row bg-light p-3 border">
+        <div class="col-sm-3 justify-content-center">
+            <p class="h4">Technology</p>
+        </div>
+        <div class="col-sm-3 justify-content-center">
+            <p class="h4">Fee</p>
+        </div>
+        <div class="col-sm-3 justify-content-center">
+            <p class="h4">Commission</p>
+        </div>
+        <div class="col-sm-3 justify-content-center">
+            <p class="h4">Action</p>
+        </div>
+    </div>
+    <div *ngFor="let data of technologyData">
+        <div class="row p-3 border">
+            <div class="col-sm-3">
+                <p>{{data.techName}}</p>
+            </div>
+            <div class="col-sm-3">
+                <p>&#8377; {{data.techFee}}</p>
+            </div>
+            <div class="col-sm-3">
+                <p>{{data.techCommission}}%</p>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-danger" (click)="delete(data.techId)">Delete</button>
+            </div>
+        </div>
+    </div>
+    <form name="" [formGroup]="details" (ngSubmit)="add()">
+        <div class="row p-3 border">
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Technology" type="text" formControlName="name">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Fee" type="text" formControlName="fee">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" placeholder="Commission" type="text" formControlName="commission">
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-success">Add</button>
+            </div>
+        </div>
+    </form>
+</div>

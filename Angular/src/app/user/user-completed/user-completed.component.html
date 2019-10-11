@@ -1,0 +1,18 @@
+<div class="container">
+    <div *ngFor="let data of trainingData" class="row justify-content-center py-5">
+        <div class="col card mt-2">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src={{data.pic}} width="150px" height="150px" class="rounded float-left" alt="">
+                    </div>
+                    <div class="col text-left pt-3">
+                        <strong> Course : </strong> {{data.course}}<br>
+                        <strong> Trainer : </strong> {{data.trainer}}<br>
+                        <strong> Date of completion : </strong> {{data.date}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

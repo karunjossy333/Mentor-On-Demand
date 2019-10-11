@@ -1,0 +1,19 @@
+[{
+        "username": "shwetha.t.1997@gmail.com",
+        "password": "user1",
+        "name": "Shwetha T",
+        "status": "block"
+    },
+    {
+        "username": "joelrajesh@gmail.com",
+        "password": "user2",
+        "name": "Joel Rajesh",
+        "status": "unblock"
+    },
+    {
+        "username": "josephmathew007@gmail.com",
+        "password": "user3",
+        "name": "Joseph Mathew",
+        "status": "unblock"
+    }
+]

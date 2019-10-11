@@ -1,0 +1,13 @@
+<div *ngIf="loginService.currentUser == 'trainee'">
+    <app-user-menu-nav-bar></app-user-menu-nav-bar>
+
+    <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="loginService.currentUser == 'guest'">
+    <div class="container m-5 p-5">
+        <div class="row justify-content-center">
+            <h2>Please Log In to continue !!!!!</h2>
+        </div>
+    </div>
+</div>

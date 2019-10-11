@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <h2>Spring Mentor's</h2>
+</div>
+<div *ngFor="let data of trainerData; let i = index">
+    <div class="row justify-content-center">
+        <div class="card mb-3 p-3">
+            <div class="row no-gutters">
+                <div class="col-md-2 p-2" data-toggle="modal" [attr.data-target]="'#mentor'+i">
+                    <img src={{data.profile}} class="card-img" alt="">
+                </div>
+                <div class="col-md-6 pl-4 ml-4" data-toggle="modal" [attr.data-target]="'#mentor'+i">
+                    <div class="card-body">
+                        <h5 class="card-title">{{data.title}} {{data.name}}</h5>
+                        <p class="card-text">Years of Experience &emsp;&emsp;&ensp;&ensp;: {{data.experience}} years</p>
+                        <p class="card-text">No of trainings Delivered &nbsp;: {{data.delivered}}</p>
+                        <p class="card-text">Fees Charge &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;: &#8377;
+                            {{data.fee}}</p>
+                    </div>
+                </div>
+                <div class="col-auto pt-5">
+                    <a routerLink="/home/sign-in" class="btn btn-primary">Book for training</a>
+                </div>
+                <div class="modal fade" [id]="'mentor'+i" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{data.title}} {{data.name}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="card-text"><strong>Years of Experience :</strong> {{data.experience}} years
+                                </p>
+                                <p class="card-text"><strong>No of trainings Delivered :</strong> {{data.delivered}}</p>
+                                <p class="card-text"><strong>Fees Charge :</strong> &#x20B9; {{data.fee}}</p>
+                                <p class="card-text"><strong>Rating :</strong> {{data.rating}} / 10</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

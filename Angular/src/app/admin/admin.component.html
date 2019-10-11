@@ -1,0 +1,22 @@
+<div *ngIf="loginService.currentUser == 'adminSignedIn'">
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <ul class="nav nav-pills nav-fill" id="user-menu">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/admin/edit-technology" routerLinkActive="active"> Edit Technologies </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/accounts" routerLinkActive="active"> Manage User Accounts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/payments" routerLinkActive="active"> Payment Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin/trainings" routerLinkActive="active"> Training Reports</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <div class="row justify-content-center mt-2">
+        <div class="col-sm-auto">
+            <h3>Available Technologies</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3" id="available-skills">
+        <div *ngFor="let data of tech">
+            <div class="col-sm-auto">
+                <button type="button" class="btn btn-info">{{data.techName}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center top-buffer mt-4">
+        <div class="col-sm-auto">
+            <h3>Your Technological Skills</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center top-buffer mt-3" id="mentor-skills">
+        <div class="col-sm-auto" id="spring">
+            <button type="button" class="btn btn-info">Spring</button>
+        </div>
+    </div>
+    <div class="row justify-content-center top-buffer mt-5" id="mentor-skills">
+        <div class="col-sm-auto">
+            <button type="button" class="btn btn-success">Save</button>
+        </div>
+    </div>
+</div>

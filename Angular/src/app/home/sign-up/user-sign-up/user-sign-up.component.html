@@ -1,0 +1,63 @@
+<div id="trainee-reg" class="container pl-5 pb-3">
+    <form class="md-form col-6 mt-3">
+        <div class="file-field">
+            <div class="mb-4">
+                <img src="./../../../../assets/images/profile-pic.png" width="150px" height="150px" class="rounded-circle z-depth-1-half avatar-pic" alt="">
+            </div>
+        </div><br>
+    </form>
+    <form class="col-7" [formGroup]="registerDetails" (ngSubmit)="register()">
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Full name" type="text" formControlName="fullName" [class.is-invalid]="registerDetails.get('fullName').invalid && registerDetails.get('fullName').touched">
+            <div class="input-group-append" [class.d-none]="registerDetails.get('fullName').valid || registerDetails.get('fullName').untouched">
+                <span class="input-group-text text-danger" id=""><small>Name is required</small></span>
+            </div>
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Email address" type="email" formControlName="email">
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+            </div>
+
+            <input class="form-control" placeholder="Phone number" type="text" formControlName="phoneNumber">
+        </div>
+
+        <label for="" class="theme-color-5">Password</label><br>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Password" type="password" formControlName="password" [class.is-invalid]="registerDetails.get('password').invalid && registerDetails.get('password').touched">
+            <div class="input-group-append" [class.d-none]="registerDetails.get('password').valid || registerDetails.get('password').untouched">
+                <span class="input-group-text text-danger" id=""><small>Password</small></span>
+            </div>
+        </div>
+        <label for="" class="theme-color-5">Confirm Password</label><br>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Password" type="password" formControlName="confirmPassword" [class.is-invalid]="registerDetails.get('confirmPassword').invalid && registerDetails.get('confirmPassword').touched">
+            <div class="input-group-append" [class.d-none]="registerDetails.get('confirmPassword').valid || registerDetails.get('confirmPassword').untouched">
+                <span class="input-group-text text-danger" id=""><small>Confirm Password</small></span>
+            </div>
+        </div>
+        <div class="form-group col-4 mt-2">
+            <button type="submit" class="btn btn-success btn-block">Register</button>
+        </div>
+        <div *ngIf="isFailed" class="alert alert-danger mt-3" role="alert">
+            {{message}}
+        </div>
+        <div *ngIf="isSuccess" class="alert alert-success mt-3" role="alert">
+            Account Successfully Created !! <button class="btn btn-success" routerLink="/home/sign-in">Log In</button>
+        </div>
+    </form>
+</div>

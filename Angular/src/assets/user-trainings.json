@@ -1,0 +1,16 @@
+[
+    {
+        "course" : "CSS",
+        "trainee" : "Joel Rajesh",
+        "trainer" : "Venugopal",
+        "date" : "Nov 18, 2019",
+        "pic" : "./../../../assets/images/Css.png"
+    },
+    {
+        "course" : "HTML",
+        "trainee" : "Joel Rajesh",
+        "trainer" : "Jim Brooke",
+        "date" : "Aug 18, 2019",
+        "pic" : "./../../../assets/images/html.png"
+    }
+]

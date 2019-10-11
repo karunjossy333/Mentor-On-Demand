@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <form name="trainingForm" [formGroup]="searchTechnology" (ngSubmit)="search()">
+        <div class="row justify-content-center" id="mentor">
+            <div class="col-sm-auto"><strong>Select a Technology : </strong></div>
+            <div class="col-sm-3">
+                <select class="form-control" name="trainingTechnology" formControlName="technology">
+                <option value = "">-- Select technology --</option>
+                <option value = "spring">Spring</option>
+                <option value = "java">Java</option>
+                <option value = "mysql">MySQL</option>
+                <option value = "angular">Angular</option>
+            </select>
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <button type="submit" class="btn btn-primary">Show</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<router-outlet></router-outlet>

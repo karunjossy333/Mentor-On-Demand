@@ -1,0 +1,70 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">
+                Withdraw fee
+            </h2>
+        </div>
+
+        <div class="card-body">
+            <div *ngFor="let data of paymentData">
+                <div *ngIf="data.pending != 0 && data.trainer == loginService.userName">
+                    <div class="col card mt-2">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <img src={{data.pic}} width="150px" height="150px" class="rounded float-left"
+                                        alt="">
+                                </div>
+                                <div class="col pt-3">
+                                    <strong>Trainee : </strong>{{data.trainee}}<br>
+                                    <strong>Course : </strong>{{data.course}} <br>
+                                    <strong>Completed : </strong>{{data.completed}}% <br>
+                                    <strong>Payments made : </strong>{{data.withdrawn}} <br>
+                                    <strong>Pending Payments : </strong>{{data.pending}} <br>
+                                </div>
+                                <div *ngIf="data.withdraw" class="col text-center pt-5">
+                                    <button type="button" class="btn btn-primary">Withdraw payment</button>
+                                </div>
+                                <div *ngIf="!data.withdraw" class="col text-center pt-5">
+                                    <button type="button" class="btn btn-primary" disabled>Withdraw payment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">
+                History
+            </h2>
+        </div>
+        <div class="card-body">
+            <div *ngFor="let data of paymentData">
+                <div *ngIf="data.pending == 0">
+                    <div class="col card mt-2">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <img src={{data.pic}} width="150px" height="150px" class="rounded float-left"
+                                        alt="">
+                                </div>
+                                <div class="col pt-3">
+                                    <strong>Trainee : </strong>{{data.trainee}}<br>
+                                    <strong>Course : </strong>{{data.course}} <br>
+                                    <strong>Payment Status: </strong>Payment Recieved <br>
+                                </div>
+                                <div class="col text-center pt-5">
+                                    <button type="button" class="btn btn-primary">Payment Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

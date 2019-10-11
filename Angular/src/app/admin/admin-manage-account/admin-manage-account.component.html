@@ -1,0 +1,69 @@
+<div class="container mt-3">
+    <div class="row bg-light p-3 border">
+        <div class="col-sm-4 justify-content-center">
+            <p class="h4">Trainee</p>
+        </div>
+    </div>
+    <div class="row p-3 bg-light border">
+        <div class="col-sm-4">
+            <p class="h5">Name</p>
+        </div>
+        <div class="col-sm-4">
+            <p class="h5">Email</p>
+        </div>
+        <div class="col-sm-4">
+            <p class="h5">Action</p>
+        </div>
+    </div>
+    <div *ngFor="let data of userData; let i = index">
+        <div class="row p-3 border">
+            <div class="col-sm-4">
+                <p>{{data.userName}}</p>
+            </div>
+            <div class="col-sm-4">
+                <p>{{data.userEmail}}</p>
+            </div>
+            <div *ngIf="data.actor.actorStatus == true" class="col-sm-4">
+                <input type="button" (click)="block(data.actor.actorType, data.actor.actorEmail, i)" class="btn btn-danger" id="user-1" value="Block">
+            </div>
+            <div *ngIf="data.actor.actorStatus == false" class="col-sm-4">
+                <input type="button" (click)="unblock(data.actor.actorType, data.actor.actorEmail, i)" class="btn btn-primary" id="user-2" value="Unblock">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row bg-light p-3 border">
+        <div class="col-sm-4 justify-content-center">
+            <p class="h4">Trainer</p>
+        </div>
+    </div>
+    <div class="row p-3 bg-light border">
+        <div class="col-sm-4">
+            <p class="h5">Name</p>
+        </div>
+        <div class="col-sm-4">
+            <p class="h5">Email</p>
+        </div>
+        <div class="col-sm-4">
+            <p class="h5">Action</p>
+        </div>
+    </div>
+    <div *ngFor="let data of mentorData; let i = index">
+        <div class="row p-3 border">
+            <div class="col-sm-4">
+                <p>{{data.mentorName}}</p>
+            </div>
+            <div class="col-sm-4">
+                <p>{{data.mentorEmail}}</p>
+            </div>
+            <div *ngIf="data.actor.actorStatus == true" class="col-sm-4">
+                <input type="button" (click)="block(data.actor.actorType, data.actor.actorEmail, i)" class="btn btn-danger" id="user-1" value="Block">
+            </div>
+            <div *ngIf="data.actor.actorStatus == false" class="col-sm-4">
+                <input type="button" (click)="unblock(data.actor.actorType, data.actor.actorEmail, i)" class="btn btn-primary" id="user-2" value="Unblock">
+            </div>
+        </div>
+    </div>
+</div>
