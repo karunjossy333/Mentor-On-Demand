@@ -11,6 +11,12 @@
      padding: 10px;
      padding-left: 40px;
  }
+
+.link {
+  color: white;
+  padding: 10px;
+  margin: 20px;
+}
  
  .navbar-brand {
      color: black;
